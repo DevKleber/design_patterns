@@ -9,9 +9,9 @@ use Src\Orcamento;
  */
 abstract class Desconto
 {
-    protected $proximoDesconto;
+    protected ?Desconto $proximoDesconto;
 
-    public function __construct(Desconto $proximoDesconto = null)
+    public function __construct(?Desconto $proximoDesconto)
     {
         $this->proximoDesconto = $proximoDesconto;
     }

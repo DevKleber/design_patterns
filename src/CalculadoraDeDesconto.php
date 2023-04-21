@@ -2,22 +2,21 @@
 
 namespace Src;
 
-use Src\Descontos\Desconto;
 use Src\Descontos\DescontoMaisDe500Reais;
 use Src\Descontos\DescontoMaisDe5Itens;
+use Src\Descontos\SemDesconto;
 
-class CalculadoraDeDesconto extends Desconto
+class CalculadoraDeDesconto
 {
     public function calculaDesconto(Orcamento $orcamento): float
     {
-        $desconto5Itens = new DescontoMaisDe5Itens();
-        $desconto = $desconto5Itens->calculaDesconto($orcamento);
+        $cadeiaDescontos = new DescontoMaisDe5Itens(
+            new DescontoMaisDe500Reais(
+                new SemDesconto()
+            )
+        );
+        var_dump($cadeiaDescontos);
 
-        if ($desconto == 0) {
-            $desconto500Reais = new DescontoMaisDe500Reais();
-            $desconto = $desconto500Reais->calculaDesconto($orcamento);
-        }
-
-        return $desconto;
+        return $cadeiaDescontos->calculaDesconto($orcamento);
     }
 }
