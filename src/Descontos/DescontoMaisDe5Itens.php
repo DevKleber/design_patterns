@@ -4,7 +4,7 @@ namespace Src\Descontos;
 
 use Src\Orcamento;
 
-class DescontoMaisDe5Itens
+class DescontoMaisDe5Itens extends Desconto
 {
     public function calculaDesconto(Orcamento $orcamento): float
     {
@@ -12,6 +12,6 @@ class DescontoMaisDe5Itens
             return $orcamento->valor * 0.1;
         }
 
-        return 0;
+        return $this->proximoDesconto->calculaDesconto($orcamento);
     }
 }

@@ -17,4 +17,4 @@ $orcamento->quantidadeItens = 5;
 // print $calculadora->calcula($orcamento, new Icms());
 
 $calculadoraDescontos = new CalculadoraDeDesconto();
-print $calculadoraDescontos->calculaDescontos($orcamento);
+print $calculadoraDescontos->calculaDesconto($orcamento);

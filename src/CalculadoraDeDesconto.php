@@ -2,12 +2,13 @@
 
 namespace Src;
 
+use Src\Descontos\Desconto;
 use Src\Descontos\DescontoMaisDe500Reais;
 use Src\Descontos\DescontoMaisDe5Itens;
 
-class CalculadoraDeDesconto
+class CalculadoraDeDesconto extends Desconto
 {
-    public function calculaDescontos(Orcamento $orcamento): float
+    public function calculaDesconto(Orcamento $orcamento): float
     {
         $desconto5Itens = new DescontoMaisDe5Itens();
         $desconto = $desconto5Itens->calculaDesconto($orcamento);
