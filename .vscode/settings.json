@@ -1,0 +1,28 @@
+{
+	"intelephense.diagnostics.undefinedTypes": false,
+	"intelephense.diagnostics.undefinedMethods": false,
+
+	"[php]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "junstyle.php-cs-fixer"
+	},
+
+	"php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+	"php-cs-fixer.config": ".php-cs-fixer.php;.php-cs-fixer.dist.php;.php_cs;.php_cs.dist",
+
+	"todohighlight.exclude": [
+		"**/node_modules/**",
+		"**/vendor/**",
+		"**/bower_components/**",
+		"**/dist/**",
+		"**/build/**",
+		"**/.vscode/**",
+		"**/.github/**",
+		"**/_output/**",
+		"**/*.min.*",
+		"**/*.map",
+		"**/.next/**",
+		"**/.public/**",
+		"**/public/**"
+	]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "kleber/pattern",
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kleber",
+            "email": "kleber107@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.16"
+    }
+}
