@@ -4,7 +4,7 @@ namespace Src\EstadosOrcamentos;
 
 use Src\Orcamento;
 
-class Finalizado
+class Finalizado extends EstadoOrcamento
 {
     public function calculaDescontoExtra(Orcamento $orcamento): float
     {
